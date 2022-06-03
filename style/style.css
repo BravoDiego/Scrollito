@@ -1,0 +1,395 @@
+@import url('https://v1.fontapi.ir/css/SFProDisplay:400;500;700');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+
+:root {
+    --white: white;
+}
+
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    color: var(--white);
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: linear-gradient(180deg, #212056 0%, #0D0AA2 100%);
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+#arrow, nav, article {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#arrow {
+    bottom: 0;
+    right: 0;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: rgba(53, 60, 190, 0.6);
+    backdrop-filter: blur(28px);
+    margin: 20px;
+    z-index: 5;
+}
+nav {
+    display: flex;
+    padding: 20px;
+    height: 51px;
+    gap: 20px;
+    border-radius: 72px;
+    line-height: 0;
+    background: rgba(53, 60, 190, 0.6);
+    backdrop-filter: blur(28px);
+    margin-top: 20px;
+    z-index: 5;
+}
+nav a {
+    flex-wrap: nowrap;
+    font-family: 'SF Pro Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1px;
+    text-align: center;
+    text-decoration: none;
+}
+article {
+    right: 30px;
+    top: 20px;
+    font-family: 'SF Pro Display';
+    font-size: 0.8rem;
+    z-index: 5;
+}
+article div {
+    margin: 5px;
+}
+article h1 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 0.9rem;
+    line-height: 19px;
+    text-align: right;
+}
+
+header {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(180deg, rgba(33, 32, 86, 0) 83.57%, #212056 100%),url(../src/background.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    bottom: -253px;
+    width: 100%;
+    height: 253px;
+    background: linear-gradient(180deg, #212056 0%, rgba(33, 32, 86, 0) 100%);
+    z-index: 1;
+}
+
+main>div {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+main img {
+    transform: scaleX(1.2) translate(-10px, 20px);
+    border-radius: 60px;
+}
+main>div:not(:first-child)>div>div:last-child {
+    width: 311px;
+}
+main > div > div {
+    max-width: 705px;
+    width: 100%;
+}
+main>div>div>div:last-child p {
+    font-family: 'SF Pro Display';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.9rem;
+    line-height: 19px;
+    opacity: 0.8;
+    margin: 20px 0 25px 0;
+}
+
+#projects {
+    margin-top: 253px;
+}
+main h1 {
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    margin-bottom: -5px;
+    font-size: 38px;
+    line-height: 51px;
+    text-align: center;
+}
+#projects p {
+    font-family: 'SF Pro Display';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    opacity: 0.8;
+    text-align: center;
+    margin-top: 6px;
+}
+#projects #arrayProjects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    max-width: 963px;
+    width: 100%;
+    margin: 56px auto;
+    justify-content: center;
+}
+#projects #arrayProjects div {
+    width: 305px;
+    height: 222px;
+    background: #0665FF;
+    opacity: 0.1;
+    border-radius: 8px;
+}
+
+
+#information div div h1, #contactMe div div h1{
+    text-align: left;
+}
+#imageContentInformation, #imageContentContactMe{
+    width: 244px;
+    height: 244px;
+    border-radius: 50%;
+    background: rgba(6, 102, 255, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#contentInformation {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+#contentContactMe {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-around;
+}
+button, main>div:last-child a {
+    background: none;
+    transition: 1s ease-in;
+    width: 202px;
+    text-align: center;
+    font-family: 'SF Pro Display';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    padding: 19px 25px;
+    border-radius: 72px;
+    border: 1px solid #FFFFFF;
+}
+button:hover, main>div:last-child a:hover {
+    transition: 0.5s ease-out;
+    background: #FFFFFF;
+    color: #0D0AA2;
+}
+main>div:last-child>div:last-child p {
+    margin-bottom: 50px;
+}
+#hide, #stop {
+    display: none;
+}
+
+
+@media screen and (max-width: 960px) {
+    #projects #arrayProjects div {
+        width: 200px;
+        height: 159px;
+    }
+    #projects #arrayProjects {
+        margin: 25px;
+    }
+}
+@media screen and (max-width: 760px) {
+    #hide {
+        transition: 2s transform;
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        transform: translateX(-100vw);
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-evenly;
+        padding: 20%;
+        align-items: center;
+        z-index: 20;
+        background: linear-gradient(180deg, #212056 0%, #0D0AA2 100%);
+        
+    }
+    #hide.active {
+        transform: translateX(0);
+        transition: 1s transform;
+    }
+    article div {
+        display: none;
+    }
+    #hide img {
+        width: 20%;
+    }
+    #hide h1 {
+        font-family: sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 51px;
+        text-align: center;
+    }
+    #hide a {
+        font-family: 'SF Pro Display';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 18px;
+    }
+    #croix {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    #croix:hover ~ #hide {
+        background: violet;
+    }
+    #croixun {
+        height: 25.5px;
+        width: 25.5px;
+        border-right: 2px solid white;
+        transform: rotate(45deg);
+        position: relative;
+    
+        top: 6px;
+    }
+    #croixdeux {
+        height: 25.5px;
+        width: 25.5px;
+        border-right: 2px solid white;
+        position: relative;
+        bottom: 3PX;
+        transform: rotate(-45deg);
+    }
+}
+@media screen and (max-width: 735px) {
+    #contentInformation, #contentContactMe {
+        width: 100%;
+    }
+    #imageContentInformation img {
+        width: 80%;
+    }
+    #imageContentContactMe img {
+        width: 120%;
+    }
+}
+@media screen and (max-width: 700px) {
+    #imageContentContactMe img {
+        width: 120%;
+    }
+    #imageContentContactMe {
+        width: 200px;
+        height: 200px;
+    }
+}
+@media screen and (max-width: 645px) {
+    #projects #arrayProjects div {
+        width: 160px;
+        height: 127px;
+    }
+}
+@media screen and (max-width: 615px) {
+    #imageContentContactMe img {
+        width: 100%;
+    }
+    #imageContentContactMe {
+        width: 200px;
+        height: 200px;
+        clip: rect(0, 20px, 20px, 20px);
+    }
+}
+@media screen and (max-width: 570px) {
+    main h1 {
+        font-size:2.5rem;
+    }
+    #imageContentInformation img {
+        width: auto;
+    }
+    #imageContentInformation {
+        width: 200px;
+        height: 200px;
+    }
+}
+@media screen and (max-width: 515px) {
+    main h1 {
+        font-size: 2em;
+    }
+    main>div>div>div:last-child p {
+        font-size: 0.8rem;
+        line-height: 15px;
+    }
+    #projects #arrayProjects div {
+        width: 128px;
+        height: 101px;
+    }
+    main>div:not(:first-child)>div>div:last-child {
+        width: 250px;
+    }
+    button, main>div:last-child a {
+        font-size: 0.75em;
+    }
+    #projects p {
+        width: 90%;
+    }
+}
+@media screen and (max-width: 500px) {
+    #stop {
+        display: flex;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        width: 100%;
+        height: 100%;
+        font-size: 16px;
+        background-color: #0D0AA2;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+    main {
+        display: none;
+    }
+}
